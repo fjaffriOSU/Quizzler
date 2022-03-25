@@ -71,10 +71,14 @@ class ViewController: UIViewController {
     func checkAnswer() {
         
         if pikcedAnswer == allQuestions.list[questionNumber].answer{
+            ProgressHUD.showSuccess("Correct")
             score += 100
+            
             
         }
         else{
+            
+            ProgressHUD.showError("Incorrect")
             
         }
     }
